@@ -1,0 +1,826 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+html {
+
+    min-height: 100%;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: #08090b;
+
+    color: #f6f3ef;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    -webkit-font-smoothing:
+        antialiased;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+
+/* =========================================================
+   PÁGINA
+========================================================= */
+
+.thank-you-page {
+
+    position: relative;
+
+    min-height:
+        calc(100vh - 90px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding:
+
+        80px
+        20px;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(126, 26, 56, 0.16),
+            transparent 35%
+        ),
+
+        #08090b;
+
+}
+
+
+
+/* =========================================================
+   FUNDO
+========================================================= */
+
+.background-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        60px 60px;
+
+    mask-image:
+
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 90%
+        );
+
+}
+
+
+.background-glow {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    top: -300px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(144, 25, 58, 0.25);
+
+    filter:
+        blur(120px);
+
+}
+
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.thank-you-card {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(
+        100%,
+        690px
+    );
+
+    padding:
+
+        48px
+        50px;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(21, 23, 27, 0.97),
+            rgba(12, 13, 16, 0.99)
+        );
+
+    border:
+
+        1px solid
+        rgba(255, 255, 255, 0.11);
+
+    border-radius:
+        20px;
+
+    box-shadow:
+
+        0
+        35px
+        100px
+        rgba(0, 0, 0, 0.45);
+
+}
+
+
+.thank-you-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 55%;
+
+    height: 1px;
+
+    top: -1px;
+
+    left: 22.5%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #ad4967,
+            transparent
+        );
+
+}
+
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-bottom: 42px;
+
+    text-align: left;
+
+}
+
+
+.brand-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #a02648,
+            #541024
+        );
+
+    border:
+
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    font-weight: 800;
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.brand-text strong {
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    font-size:
+        0.73rem;
+
+    letter-spacing:
+        0.13em;
+
+}
+
+
+.brand-text span {
+
+    color:
+        #666a72;
+
+    font-size:
+        0.61rem;
+
+}
+
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.success-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin:
+
+        0
+        auto
+        25px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(91, 158, 118, 0.09);
+
+    border:
+
+        1px solid
+        rgba(120, 185, 145, 0.25);
+
+    color:
+        #9dc9ae;
+
+    font-size:
+        1.25rem;
+
+}
+
+
+.eyebrow {
+
+    display: block;
+
+    margin-bottom:
+        12px;
+
+    color:
+        #b66d82;
+
+    font-size:
+        0.59rem;
+
+    font-weight: 800;
+
+    letter-spacing:
+        0.17em;
+
+}
+
+
+h1 {
+
+    max-width:
+        570px;
+
+    margin-inline:
+        auto;
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    font-size:
+
+        clamp(
+            2.2rem,
+            5vw,
+            3.7rem
+        );
+
+    line-height:
+        1.08;
+
+    letter-spacing:
+        -0.05em;
+
+    font-weight:
+        600;
+
+}
+
+
+h1 strong {
+
+    display: block;
+
+    color:
+        #b9687f;
+
+}
+
+
+.description {
+
+    max-width:
+        460px;
+
+    margin:
+
+        20px
+        auto
+        34px;
+
+    color:
+        #999ca2;
+
+    font-size:
+        0.91rem;
+
+    line-height:
+        1.65;
+
+}
+
+
+
+/* =========================================================
+   WHATSAPP BOX
+========================================================= */
+
+.whatsapp-box {
+
+    padding:
+        25px;
+
+    text-align:
+        left;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border:
+
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    border-radius:
+        13px;
+
+}
+
+
+.whatsapp-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.whatsapp-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(55, 170, 105, 0.1);
+
+    border:
+
+        1px solid
+        rgba(73, 189, 122, 0.18);
+
+    color:
+        #72c999;
+
+}
+
+
+.whatsapp-icon svg {
+
+    width:
+        23px;
+
+    height:
+        23px;
+
+}
+
+
+.whatsapp-heading span {
+
+    display: block;
+
+    margin-bottom:
+        3px;
+
+    color:
+        #6f9f83;
+
+    font-size:
+        0.54rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.12em;
+
+}
+
+
+.whatsapp-heading h2 {
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    font-size:
+        1.05rem;
+
+}
+
+
+.whatsapp-box > p {
+
+    margin:
+
+        20px
+        0;
+
+    color:
+        #8a8d93;
+
+    font-size:
+        0.77rem;
+
+    line-height:
+        1.6;
+
+}
+
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.whatsapp-button {
+
+    min-height:
+        57px;
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+
+        0
+        20px;
+
+    border-radius:
+        7px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #258a55,
+            #17663d
+        );
+
+    color:
+        white;
+
+    font-size:
+        0.73rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.025em;
+
+    box-shadow:
+
+        0
+        15px
+        35px
+        rgba(20, 104, 59, 0.18);
+
+    transition:
+        0.3s;
+
+}
+
+
+.whatsapp-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #2d9c62,
+            #197348
+        );
+
+    box-shadow:
+
+        0
+        18px
+        45px
+        rgba(20, 104, 59, 0.28);
+
+}
+
+
+.whatsapp-button span {
+
+    font-size:
+        1.1rem;
+
+}
+
+
+
+/* =========================================================
+   NOTA
+========================================================= */
+
+.important-note {
+
+    max-width:
+        540px;
+
+    margin:
+
+        25px
+        auto
+        0;
+
+    color:
+        #666970;
+
+    font-size:
+        0.65rem;
+
+    line-height:
+        1.6;
+
+}
+
+
+.important-note strong {
+
+    color:
+        #9a9da2;
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    min-height:
+        90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        20px;
+
+    padding:
+        20px;
+
+    border-top:
+
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    background:
+        #050607;
+
+    color:
+        #4f5258;
+
+    font-size:
+        0.59rem;
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media
+(max-width: 600px) {
+
+
+    .thank-you-page {
+
+        align-items:
+            flex-start;
+
+        padding:
+
+            30px
+            15px
+            50px;
+
+    }
+
+
+    .thank-you-card {
+
+        padding:
+
+            35px
+            20px;
+
+        border-radius:
+            15px;
+
+    }
+
+
+    .brand {
+
+        margin-bottom:
+            32px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            2.45rem;
+
+    }
+
+
+    .description {
+
+        margin-bottom:
+            28px;
+
+    }
+
+
+    .whatsapp-box {
+
+        padding:
+            20px 17px;
+
+    }
+
+
+    .whatsapp-button {
+
+        font-size:
+            0.68rem;
+
+    }
+
+
+}
